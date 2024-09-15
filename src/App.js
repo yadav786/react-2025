@@ -1,12 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from 'react';
+import { UserContext } from './Context';
+import './assets/css/app.scss';
 
 function App() {
-  return (
+  const val = useContext(UserContext);
+   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <UserContext.Consumer >
+          {
+            value => <button>UserContext Consumer Value {value}</button>
+          }
+        </UserContext.Consumer>        <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
