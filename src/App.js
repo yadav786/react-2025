@@ -1,10 +1,12 @@
 import { useContext } from 'react';
 import { UserContext } from './Context';
+import Jira from './Jira';
 import './assets/css/app.scss';
 
 function App() {
   const val = useContext(UserContext);
-   return (
+  console.log(val);
+  return (
     <div className="App">
       <header className="App-header">
         <UserContext.Consumer >
@@ -14,15 +16,8 @@ function App() {
         </UserContext.Consumer>        <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Jira />
     </div>
   );
 }
