@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import { UserContext } from './Context';
 import Jira from './Jira';
+import HOCClassLifeCycle from './HOCClassLifeCycle';
 import './assets/css/app.scss';
 
 function App() {
   const val = useContext(UserContext);
-  console.log(val);
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +18,7 @@ function App() {
         </p>
       </header>
       <Jira />
+      <HOCClassLifeCycle />
     </div>
   );
 }
