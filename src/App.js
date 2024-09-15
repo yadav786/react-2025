@@ -1,8 +1,5 @@
 import { useContext } from 'react';
 import { UserContext } from './Context';
-import Jira from './Jira';
-import HOCClassLifeCycle from './HOCClassLifeCycle';
-import './assets/css/app.scss';
 
 function App() {
   const val = useContext(UserContext);
@@ -17,8 +14,6 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
       </header>
-      <Jira />
-      <HOCClassLifeCycle />
     </div>
   );
 }

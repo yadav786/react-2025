@@ -4,13 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { UserContext } from './Context';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './Header';
+import Jira from './Jira';
+import HOCClassLifeCycle from './HOCClassLifeCycle';
+import './assets/css/app.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
+    <Header/>
     <UserContext.Provider value="Pankaj">
-      <App />
+      <Routes>
+        <Route  path='/'  element={<App />} />
+        <Route  path='/jira'  element={<Jira />} />
+        <Route  path='/hoc'  element={<HOCClassLifeCycle />} />
+      </Routes>
     </UserContext.Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
