@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 const Header = () => {
     return (
       <nav>
+        <ThemeSwitcher />
         <ul>
           <li>
             <Link to="/">App</Link>

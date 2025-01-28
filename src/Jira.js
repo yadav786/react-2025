@@ -17,7 +17,7 @@ export default function Jira() {
         });
         setAllTasks(updatedTasks);
     }
-
+    console.log(allTasks);
     return (
         <div id="board">
             <div className="status-board" id="todo">
